@@ -10,8 +10,8 @@ namespace SpeedReaderTRY
 
     public class YandexGptClient
     {
-        private static readonly string MyToken = "AQVN2dHfydd132-MihEVwKu6PV7CHqMrQIPW3TMP";
-        private static readonly string MyFolderId = "b1g01kbjq536m6i90ldr";
+        private static readonly string MyToken = "Ваш токен";
+        private static readonly string MyFolderId = "Ваша директория";
         private static readonly string ApiUrl = "https://llm.api.cloud.yandex.net/foundationModels/v1/completion";
 
         public async Task<string> AskYandexGpt(string prompt)
@@ -73,7 +73,7 @@ namespace SpeedReaderTRY
         public static async Task TryToAsk()
         {
             var gpt = new YandexGptClient();
-            string answer = await gpt.AskYandexGpt("Запрос");
+            string answer = await gpt.AskYandexGpt("Ваш запрос пишется сюда");
             Console.WriteLine(answer);
         }
 
